@@ -1,7 +1,7 @@
 //imports
 importScripts('js/sw-utils.js');
 
-const cache_estatico = 'statico-v2';//lo que creamos
+const cache_estatico = 'statico-v3';//lo que creamos
 const cache_dinamico = 'dinamico-v1';//cambia constantemente
 const cache_inmutable = 'inmutable-v1';//librerias que nunca modificamos
 
