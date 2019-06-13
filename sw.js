@@ -1,8 +1,8 @@
 //imports
 importScripts('js/sw-utils.js');
 
-const cache_estatico = 'statico-v3';//lo que creamos
-const cache_dinamico = 'dinamico-v1';//cambia constantemente
+const cache_estatico = 'statico-v4';//lo que creamos
+const cache_dinamico = 'dinamico-v2';//cambia constantemente
 const cache_inmutable = 'inmutable-v1';//librerias que nunca modificamos
 
 
@@ -45,6 +45,9 @@ self.addEventListener('activate',e =>{
 	const eliminar = caches.keys().then(keys=>{
 		keys.forEach(key =>{
 			if(key !== cache_estatico && key.includes('statico')) {
+				return caches.delete(key);
+			}
+			if(key !== cache_estatico && key.includes('dinamico')) {
 				return caches.delete(key);
 			}
 		});
