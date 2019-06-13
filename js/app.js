@@ -1,7 +1,12 @@
-
+var url = window.location.href;
+var swlocatin = "/twittor/sw.js";
 
 if(navigator.serviceWorker){
-    navigator.serviceWorker.register('/sw.js');
+
+    if (url.includes('localhost')) {
+        swlocatin = '/sw.js';
+    }
+    navigator.serviceWorker.register(swlocatin);
 }
 
 

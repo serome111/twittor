@@ -8,7 +8,7 @@ const cache_inmutable = 'inmutable-v1';//librerias que nunca modificamos
 
 
 const app_shell = [
-	'/',
+	//'/',
 	'css/style.css',
 	'css/animate.css',
 	'img/favicon.ico',
